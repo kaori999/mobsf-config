@@ -1,0 +1,17 @@
+mobsf config setup :
+terminal : bash
+cd ~/.mobsf
+
+docker compose down mobsf
+
+docker images
+docker rmi opensecurity/mobile-security-framework-mobsf
+
+docker volume ls
+docker volume rm mobsf_mobsf_data
+
+rm -rf ~/.mobsf
+
+ls -la
+
+sudo ss -tulpn | grep [port]

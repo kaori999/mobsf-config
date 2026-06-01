@@ -1,0 +1,48 @@
+mobsf installation setup :
+terminal : bash
+docker pull opensecurity/mobile-security-framework-mobsf
+
+mobsf config setup :
+terminal : bash
+mkdir -p ~/.mobsf
+
+ls -la
+
+cd ~/.mobsf
+
+nano docker-compose.yml
+^ config :
+services:
+  mobsf:
+    image: opensecurity/mobile-security-framework-mobsf
+    container_name: mobsf
+    ports:
+      - "[port]:8000" // sesuaikan dengan port yang di inginkan "default port 2000"
+    restart: unless-stopped
+
+cat docker-compose.yml
+
+docker compose up -d mobsf
+docker compose start mobsf
+docker compose restart mobsf
+docker compose logs -f mobsf
+
+docker inspect mobsf
+
+docker logs -f mobsf
+
+ls -la
+
+sudo ss -tulpn | grep [port]
+
+mobsf config setup :
+web browser : UI
+buka web browser
+
+klick pada tab url
+
+ketik http://127.0.0.1:[port] // sesuaikan dengan port setup mobsf
+
+di halaman sign in isi tab username [mobsf] dan password [mobsf]
+
+lalu klick sign in
