@@ -17,7 +17,7 @@ services:
     image: opensecurity/mobile-security-framework-mobsf
     container_name: mobsf
     ports:
-      - "[port]:8000" // sesuaikan dengan port yang di inginkan "default port 2000"
+      - "[port]:8000" // adjust to the desired port
     restart: unless-stopped
 
 cat docker-compose.yml
@@ -37,12 +37,12 @@ sudo ss -tulpn | grep [port]
 
 mobsf config setup :
 web browser : UI
-buka web browser
+open web browser
 
-klick pada tab url
+click on the url tab
 
-ketik http://127.0.0.1:[port] // sesuaikan dengan port setup mobsf
+write http://127.0.0.1:[port] // adjust to mobsf setup port
 
-di halaman sign in isi tab username [mobsf] dan password [mobsf]
+On the sign in page, fill in the username tab [mobsf] and password [mobsf]
 
-lalu klick sign in
+then click sign in
