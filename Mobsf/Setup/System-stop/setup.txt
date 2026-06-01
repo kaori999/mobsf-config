@@ -2,9 +2,8 @@ mobsf config setup :
 terminal : bash
 cd ~/.mobsf
 
-// perintah stop bawaan docker
 docker compose ps
 
-// perintah stop bawaan docker
+// docker's built-in stop command
 docker compose stop mobsf
-docker compose kill mobsf // cara paksa "tidak disarankan"
+docker compose kill mobsf 
